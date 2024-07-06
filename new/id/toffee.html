@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="robots" content ="noindex,nofollow">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JW Player</title>
+    <!-- Include the JW Player library -->
+    <script src="https://cdn.jwplayer.com/libraries/MgDmF9pu.js"></script>
+</head>
+<body>
+    <!-- Create a div element to hold the player -->
+    <div id="player"></div>
+
+    <script>
+        // Fetch JSON data from the provided URL
+        fetch('https://raw.githubusercontent.com/byte-capsule/Toffee-Channels-Link-Headers/main/toffee_channel_data.json')
+            .then(response => response.json())
+            .then(data => {
+                // Extract Ramadan Live channel information
+                const ramadanLiveChannel = data.channels.find(channel => channel.name === 'Ramadan Live');
+                
+                // Initialize JW Player with channel link and headers
+                const playerInstance = jwplayer("player").setup({
+                    file: ramadanLiveChannel.link,
+                    width: "100%",
+                    aspectratio: "16:9",
+                    autostart: true,
+                    preload: 'auto',
+                    primary: 'html5',
+                    controls: true,
+                    displaytitle: true,
+                    displaydescription: true,
+                    // Set headers for the player
+                    hlshtml: true,
+                    hlsjsxhrheaders: ramadanLiveChannel.headers
+                });
+            })
+            .catch(error => console.error('Error fetching JSON:', error));
+    </script>
+</body>
+</html>

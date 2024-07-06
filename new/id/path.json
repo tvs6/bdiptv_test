@@ -1,0 +1,32 @@
+{
+    "channel9": {
+        "drm_info": {
+            "keyId": "d84c325f36814f39bbe59080272b10c3",
+            "key": "550727de4c96ef1ecff874905493580f"
+        }
+    },
+    "channel10": {
+        "drm_info": {
+            "keyId": "00056d5c8882917a4463d5b42ba86c31",
+            "key": "226c39dd7d41b6f0e27cb7d8940f644f"
+        }
+    },
+    "channel11": {
+        "drm_info": {
+            "keyId": "00051940357f91714b419a79af5a5f9a",
+            "key": "f4e7d0c43db524393ba85fd240d9cd6e"
+        }
+    },
+    "channel12": {
+        "drm_info": {
+            "keyId": "00050559cd31897cd28ef1cad1857606",
+            "key": "32203d3d424a70258a9f676316681bea"
+        }
+    }, 
+    "channel13": {
+        "drm_info": {
+            "keyId": "0005e6237bc7c7a273c82a1b86b457c8",
+            "key": "0783c788b5a8b7be6c77b13525a10eb8"
+        }
+    }
+}
